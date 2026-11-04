@@ -1,39 +1,50 @@
 // Karussell auf der Seite: ein Bild sichtbar, Pfeile, Punkte, Wischen.
 (() => {
+  // Texte kommen aus js/i18n.js
+  const t = (key, vars) => (window.I18N ? window.I18N.t(key, vars) : key);
+
   document.querySelectorAll('.carousel').forEach((carousel) => {
     const track = carousel.querySelector('.car-track');
     const slides = Array.from(track.children);
     if (slides.length < 2) return;
 
+    // Blätterrichtung bleibt auch auf Arabisch links → rechts
+    carousel.dir = 'ltr';
     carousel.setAttribute('role', 'region');
-    carousel.setAttribute('aria-roledescription', 'Karussell');
 
     // Pfeile
     const prev = document.createElement('button');
     prev.type = 'button';
     prev.className = 'car-btn car-prev';
-    prev.setAttribute('aria-label', 'Vorheriges Bild');
     prev.textContent = '‹';
     const next = document.createElement('button');
     next.type = 'button';
     next.className = 'car-btn car-next';
-    next.setAttribute('aria-label', 'Nächstes Bild');
     next.textContent = '›';
     carousel.append(prev, next);
 
     // Punkte
     const dots = document.createElement('div');
     dots.className = 'car-dots';
+    dots.dir = 'ltr';
     const dotButtons = slides.map((_, i) => {
       const dot = document.createElement('button');
       dot.type = 'button';
       dot.className = 'car-dot';
-      dot.setAttribute('aria-label', `Bild ${i + 1} von ${slides.length}`);
       dot.addEventListener('click', () => goTo(i));
       dots.appendChild(dot);
       return dot;
     });
     carousel.after(dots);
+
+    function label() {
+      carousel.setAttribute('aria-roledescription', t('ui.carousel'));
+      prev.setAttribute('aria-label', t('ui.prev'));
+      next.setAttribute('aria-label', t('ui.next'));
+      dotButtons.forEach((dot, i) => dot.setAttribute('aria-label', t('ui.dot', { n: i + 1, total: slides.length })));
+    }
+    label();
+    document.addEventListener('langchange', label);
 
     let index = 0;
 
@@ -95,6 +106,7 @@
 
 // Lightbox mit Karussell: Bilder eines Projekts bilden eine Galerie.
 (() => {
+  const t = (key, vars) => (window.I18N ? window.I18N.t(key, vars) : key);
   const images = document.querySelectorAll('.carousel img, .shots img, .small .item img');
   if (!images.length || typeof HTMLDialogElement !== 'function') return;
 
@@ -109,20 +121,30 @@
   // Dialog aufbauen
   const dlg = document.createElement('dialog');
   dlg.className = 'lightbox';
-  dlg.setAttribute('aria-label', 'Bildansicht');
+  dlg.dir = 'ltr';
   dlg.innerHTML = `
-    <button class="lb-btn lb-close" type="button" aria-label="Schließen">✕</button>
-    <button class="lb-btn lb-prev" type="button" aria-label="Vorheriges Bild">‹</button>
+    <button class="lb-btn lb-close" type="button">✕</button>
+    <button class="lb-btn lb-prev" type="button">‹</button>
     <figure class="lb-figure">
       <img class="lb-img" alt="">
-      <figcaption class="lb-caption"><span class="lb-text"></span><span class="lb-count"></span></figcaption>
+      <figcaption class="lb-caption"><span class="lb-text" dir="auto"></span><span class="lb-count"></span></figcaption>
     </figure>
-    <button class="lb-btn lb-next" type="button" aria-label="Nächstes Bild">›</button>`;
+    <button class="lb-btn lb-next" type="button">›</button>`;
   document.body.appendChild(dlg);
 
   const lbImg = dlg.querySelector('.lb-img');
   const lbText = dlg.querySelector('.lb-text');
   const lbCount = dlg.querySelector('.lb-count');
+
+  // Beschriftungen in der aktuellen Sprache (auch nach dem Umschalten)
+  function label() {
+    dlg.setAttribute('aria-label', t('ui.viewer'));
+    dlg.querySelector('.lb-close').setAttribute('aria-label', t('ui.close'));
+    dlg.querySelector('.lb-prev').setAttribute('aria-label', t('ui.prev'));
+    dlg.querySelector('.lb-next').setAttribute('aria-label', t('ui.next'));
+    images.forEach((img) => img.setAttribute('aria-label', t('ui.zoom', { alt: img.alt })));
+  }
+  document.addEventListener('langchange', label);
 
   let current = [];
   let index = 0;
@@ -162,8 +184,7 @@
     lbImg.removeAttribute('src');
     const last = current[index];
     if (!last) return;
-    const carousel = last.closest('.carousel');
-    if (carousel && carousel.goToSlide) carousel.goToSlide(last);
+    last.closest('.carousel')?.goToSlide?.(last);
     last.focus({ preventScroll: true });
   });
 
@@ -173,7 +194,6 @@
       img.classList.add('zoomable');
       img.tabIndex = 0;
       img.setAttribute('role', 'button');
-      img.setAttribute('aria-label', `${img.alt} – vergrößern`);
       img.addEventListener('click', () => open(gallery, i));
       img.addEventListener('keydown', (e) => {
         if (e.key === 'Enter' || e.key === ' ') {
@@ -183,6 +203,8 @@
       });
     });
   });
+
+  label();
 
   // Steuerung
   dlg.querySelector('.lb-close').addEventListener('click', () => dlg.close());
