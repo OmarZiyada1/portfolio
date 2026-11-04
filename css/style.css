@@ -190,7 +190,9 @@ html.lb-open{overflow:hidden}
   .theme-toggle{margin-inline-start:12px;width:32px;height:32px}
   .lang{margin-inline-start:12px}
   .lang-btn{height:32px;padding:0 9px}
-  .to-top{bottom:16px;inset-inline-end:16px;width:44px;height:44px}
+  .to-top{bottom:16px;inset-inline-end:16px;width:42px;height:42px}
+  .to-top svg{width:18px;height:18px}
+  footer{padding-bottom:88px}
   .lb-figure{max-width:100vw;padding:0 8px}
   .lb-prev,.lb-next{top:auto;bottom:20px;transform:none}
   .lb-img{max-height:calc(100dvh - 170px)}

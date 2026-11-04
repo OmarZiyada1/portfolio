@@ -236,14 +236,36 @@
   });
 })();
 
-// Pfeil nach oben: erscheint, sobald man etwa eine Bildschirmhöhe heruntergescrollt hat.
+// Pfeil nach oben.
+// Ab 1090px Breite: erscheint, sobald man etwa eine Bildschirmhöhe heruntergescrollt hat.
+// Darunter: nur beim Hochscrollen (beim Lesen verdeckt er sonst Text) und ganz am Seitenende.
 (() => {
   const btn = document.querySelector('.to-top');
   if (!btn) return;
-  const toggle = () => btn.classList.toggle('show', window.scrollY > window.innerHeight * 0.8);
-  window.addEventListener('scroll', toggle, { passive: true });
-  window.addEventListener('resize', toggle);
-  toggle();
+  const mobile = window.matchMedia('(max-width: 1089px)');
+  const JITTER = 8; // kleine Wackler beim Scrollen ignorieren (px)
+  let lastY = window.scrollY;
+
+  function update() {
+    const y = window.scrollY;
+    const past = y > window.innerHeight * 0.8;
+    if (!mobile.matches) {
+      btn.classList.toggle('show', past);
+      lastY = y;
+      return;
+    }
+    const atBottom = window.innerHeight + y >= document.documentElement.scrollHeight - 40;
+    const delta = y - lastY;
+    if (Math.abs(delta) < JITTER && !atBottom) return;
+    btn.classList.toggle('show', past && (delta < 0 || atBottom));
+    lastY = y;
+  }
+
+  window.addEventListener('scroll', update, { passive: true });
+  window.addEventListener('resize', update);
+  mobile.addEventListener('change', update);
+  update();
+
   btn.addEventListener('click', () => {
     const smooth = !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     window.scrollTo({ top: 0, behavior: smooth ? 'smooth' : 'auto' });
