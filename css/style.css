@@ -19,9 +19,12 @@ a{color:inherit}
 nav{position:sticky;top:0;background:var(--bg);border-bottom:1px solid var(--line);z-index:10;transition:background-color .2s}
 nav .wrap{display:flex;justify-content:space-between;align-items:center;height:56px}
 nav b{font-weight:600;white-space:nowrap}
-nav .links{display:flex;align-items:center}
-nav .links a{text-decoration:none;color:var(--muted);margin-inline-start:22px;font-size:14px}
+nav .links{display:flex;align-items:center;flex-shrink:0}
+nav .links a{text-decoration:none;color:var(--muted);margin-inline-start:22px;font-size:14px;white-space:nowrap}
 nav .links a:hover{color:var(--fg)}
+/* Wenn nicht alle Links passen (js/nav.js): nur Sprache und Hell/Dunkel */
+nav.compact .links a{display:none}
+nav.compact .lang-btn svg{display:block}
 
 /* Theme-Knopf */
 .theme-toggle{display:flex;align-items:center;justify-content:center;width:34px;height:34px;margin-inline-start:18px;padding:0;border:1px solid var(--line);border-radius:50%;background:transparent;color:var(--fg);cursor:pointer;transition:border-color .15s}
@@ -182,21 +185,15 @@ html.lb-open{overflow:hidden}
   .car-btn{width:32px;height:32px;font-size:18px}
   .car-prev{left:8px}
   .car-next{right:8px}
-  nav .links a{margin-inline-start:14px}
   .theme-toggle{margin-inline-start:12px;width:32px;height:32px}
   .lang{margin-inline-start:12px}
   .lang-btn{height:32px;padding:0 9px}
   .lang-btn svg{display:none}
-  nav .links a.hide-sm{display:none}
   .lb-figure{max-width:100vw;padding:0 8px}
   .lb-prev,.lb-next{top:auto;bottom:20px;transform:none}
   .lb-img{max-height:calc(100dvh - 170px)}
 }
 @media (max-width:400px){
   nav .wrap{padding:0 18px}
-  nav .links a{margin-inline-start:10px;font-size:13px}
   .theme-toggle,.lang{margin-inline-start:10px}
-}
-@media (max-width:350px){
-  nav .links a.hide-xs{display:none}
 }
