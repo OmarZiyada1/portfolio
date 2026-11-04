@@ -6,71 +6,8 @@
 <title>Omar Ziyada – Portfolio</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<style>
-  :root{--bg:#fff;--fg:#111;--muted:#6b6b6b;--line:#e6e6e6;--soft:#f5f5f5;}
-  *{box-sizing:border-box;margin:0;padding:0}
-  body{font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--fg);line-height:1.55;font-size:16px;-webkit-font-smoothing:antialiased}
-  a{color:inherit}
-  .wrap{max-width:880px;margin:0 auto;padding:0 24px}
-  nav{position:sticky;top:0;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);z-index:10}
-  nav .wrap{display:flex;justify-content:space-between;align-items:center;height:56px}
-  nav b{font-weight:600}
-  nav .links a{text-decoration:none;color:var(--muted);margin-left:22px;font-size:14px}
-  nav .links a:hover{color:var(--fg)}
-  header{padding:88px 0 56px}
-  h1{font-size:44px;line-height:1.1;font-weight:700;letter-spacing:-.02em}
-  .role{font-size:19px;color:var(--muted);margin-top:10px}
-  .intro{margin-top:24px;max-width:620px}
-  .contact{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
-  .btn{display:inline-block;padding:9px 16px;border:1px solid var(--fg);border-radius:6px;text-decoration:none;font-size:14px;font-weight:500}
-  .btn.dark{background:var(--fg);color:#fff}
-  .btn:hover{opacity:.8}
-  section{padding:56px 0;border-top:1px solid var(--line)}
-  h2{font-size:13px;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);font-weight:600;margin-bottom:28px}
-  .facts{display:grid;grid-template-columns:repeat(2,1fr);gap:28px 40px}
-  .facts h3{font-size:15px;font-weight:600;margin-bottom:6px}
-  .facts p,.facts li{font-size:15px;color:#333}
-  .facts ul{list-style:none}
-  .facts li span{color:var(--muted)}
-  .facts li+li{margin-top:14px}
-  .facts li .t{display:block;color:var(--fg);font-weight:500}
-  .facts li .s{display:block;font-size:14px}
-  .tags{display:flex;flex-wrap:wrap;gap:6px}
-  .tag{font-size:13px;padding:3px 10px;background:var(--soft);border-radius:4px}
-  .project{margin-bottom:64px}
-  .project:last-child{margin-bottom:0}
-  .project .head{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap}
-  .project h3{font-size:24px;font-weight:700;letter-spacing:-.01em}
-  .project .meta{font-size:14px;color:var(--muted)}
-  .project p.desc{margin:10px 0 14px;max-width:680px;color:#333}
-  .project .my{font-size:14px;margin-bottom:14px}
-  .project .my b{font-weight:600}
-  .shots{display:grid;gap:12px;margin:18px 0 16px}
-  .shots.two{grid-template-columns:1fr 1fr}
-  .shots img{width:100%;display:block;border:1px solid var(--line);border-radius:8px}
-  .plinks{display:flex;flex-wrap:wrap;gap:16px;font-size:14px;font-weight:500}
-  .plinks a{text-decoration:none;border-bottom:1px solid var(--fg)}
-  .plinks a:hover{opacity:.6}
-  .designs{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-  .dcard{display:block;text-decoration:none;border:1px solid var(--line);border-radius:10px;padding:24px;transition:border-color .15s}
-  .dcard:hover{border-color:var(--fg)}
-  .dcard .label{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.1em}
-  .dcard h3{font-size:20px;margin:6px 0 8px}
-  .dcard p{font-size:14px;color:#444;margin-bottom:16px}
-  .dcard .go{font-size:14px;font-weight:500}
-  .small{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-  .small .item img{width:100%;aspect-ratio:4/3;object-fit:cover;border:1px solid var(--line);border-radius:8px;display:block}
-  .small h3{font-size:16px;margin-top:10px}
-  .small p{font-size:14px;color:var(--muted)}
-  footer{border-top:1px solid var(--line);padding:40px 0 56px;font-size:14px;color:var(--muted)}
-  footer a{color:var(--fg)}
-  @media (max-width:640px){
-    h1{font-size:34px} header{padding:56px 0 40px}
-    .facts,.designs,.small,.shots.two{grid-template-columns:1fr}
-    nav .links a{margin-left:14px}
-    nav .links a.hide-sm{display:none}
-  }
-</style>
+<link rel="stylesheet" href="css/style.css">
+<script src="js/main.js" defer></script>
 </head>
 <body>
 
@@ -87,13 +24,16 @@
 <div class="wrap">
 
 <header>
-  <h1>Omar Ziyada</h1>
-  <div class="role">Backend-Entwickler · Medieninformatik (B.Sc.) · Bremen</div>
-  <p class="intro">Ich entwickle Backend-Systeme mit Java und Spring Boot und gestalte Oberflächen in Figma. Studium der Medieninformatik an der Hochschule Bremen, Praxis als Backend-Entwickler bei der Webmen GmbH.</p>
-  <div class="contact">
-    <a class="btn dark" href="mailto:omarziyada.bremen@gmail.com">E-Mail schreiben</a>
-    <a class="btn" href="https://github.com/OmarZiyada1">GitHub</a>
+  <div class="hero-text">
+    <h1>Omar Ziyada</h1>
+    <div class="role">Backend-Entwickler · Medieninformatik (B.Sc.) · Bremen</div>
+    <p class="intro">Ich entwickle Backend-Systeme mit Java und Spring Boot und gestalte Oberflächen in Figma. Studium der Medieninformatik an der Hochschule Bremen, Praxis als Backend-Entwickler bei der Webmen GmbH.</p>
+    <div class="contact">
+      <a class="btn dark" href="mailto:omarziyada.bremen@gmail.com">E-Mail schreiben</a>
+      <a class="btn" href="https://www.linkedin.com/in/omarziyada">LinkedIn</a>
+    </div>
   </div>
+  <img class="portrait" src="img/omar.webp" alt="Porträt von Omar Ziyada" width="600" height="600">
 </header>
 
 <section id="ueber-mich">
@@ -104,6 +44,8 @@
       <ul>
         <li><span class="t">Backend-Entwicklung (Praktikum)</span><span class="s">Webmen GmbH · 04–07/2026</span></li>
       </ul>
+      <h3 class="sub">Sprachen</h3>
+      <p>Arabisch (Muttersprache) · Deutsch (C1) · Englisch (B2)</p>
     </div>
     <div>
       <h3>Ausbildung</h3>
@@ -112,19 +54,19 @@
         <li><span class="t">Math.-techn. Assistent (Wirtschaftsinformatik)</span><span class="s">Europaschule SZ Utbremen · 2019–2022</span><span class="s">Programmierung, SAP, Rechnungswesen · mit Fachhochschulreife</span></li>
       </ul>
     </div>
-    <div>
-      <h3>Technik</h3>
-      <div class="tags">
-        <span class="tag">Java</span><span class="tag">Spring Boot</span><span class="tag">REST-APIs</span><span class="tag">PostgreSQL</span><span class="tag">MySQL</span><span class="tag">Docker</span><span class="tag">Git</span><span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Playwright</span><span class="tag">SAP</span><span class="tag">WordPress (Grundlagen)</span>
-      </div>
-      <h3 style="margin-top:18px">Design &amp; Medien</h3>
-      <div class="tags">
-        <span class="tag">Figma</span><span class="tag">Adobe Illustrator</span><span class="tag">Canva</span><span class="tag">Videobearbeitung</span>
-      </div>
-    </div>
-    <div>
-      <h3>Sprachen</h3>
-      <p>Arabisch (Muttersprache) · Deutsch (C1) · Englisch (B2)</p>
+    <div class="skills">
+      <h3>Kenntnisse</h3>
+      <dl class="skill-list">
+        <div><dt>Programmiersprachen</dt><dd class="tags"><span class="tag">Java</span><span class="tag">SQL</span><span class="tag">JavaScript</span><span class="tag">TypeScript</span><span class="tag">HTML</span><span class="tag">CSS</span></dd></div>
+        <div><dt>Frameworks</dt><dd class="tags"><span class="tag">Spring Boot</span><span class="tag">React</span></dd></div>
+        <div><dt>Datenbanken</dt><dd class="tags"><span class="tag">MySQL</span><span class="tag">PostgreSQL</span></dd></div>
+        <div><dt>Werkzeuge</dt><dd class="tags"><span class="tag">Git</span><span class="tag">Docker</span><span class="tag">Postman</span><span class="tag">IntelliJ IDEA</span><span class="tag">VS Code</span><span class="tag">Playwright</span><span class="tag">WordPress</span></dd></div>
+        <div><dt>ERP-Systeme</dt><dd class="tags"><span class="tag">SAP</span><span class="tag">Comarch (erste Erfahrungen)</span></dd></div>
+        <div><dt>Wirtschaft</dt><dd class="tags"><span class="tag">Betriebswirtschaftslehre</span><span class="tag">Rechnungswesen</span></dd></div>
+        <div><dt>KI-Tools</dt><dd class="tags"><span class="tag">Claude</span><span class="tag">Cursor</span><span class="tag">KI-gestützte Entwicklung</span></dd></div>
+        <div><dt>Methoden</dt><dd class="tags"><span class="tag">Agile Softwareentwicklung (Scrum)</span><span class="tag">OOP</span><span class="tag">Software-Testing</span><span class="tag">REST-APIs</span></dd></div>
+        <div><dt>Design &amp; Medien</dt><dd class="tags"><span class="tag">Figma</span><span class="tag">Adobe Illustrator</span><span class="tag">Canva</span><span class="tag">Videobearbeitung</span></dd></div>
+      </dl>
     </div>
   </div>
 </section>
@@ -136,12 +78,12 @@
     <div class="head"><h3>HSB E-Portfolio</h3><span class="meta">Bachelorarbeit · Teamprojekt · 2026</span></div>
     <p class="desc">Plattform der Hochschule Bremen, auf der Studierende Abschlussarbeiten, Projekte und Forschung aus allen Fakultäten zeigen können, mit Bestenliste, Filtern und Reviews.</p>
     <p class="my"><b>Mein Part:</b> Full-Stack-Entwicklung (Spring Boot + React/TypeScript), automatisierte Barrierefreiheitstests mit Playwright und axe (Ziel WCAG 2.2 AA), Figma-Design-System.</p>
-    <div class="shots">
-      <img src="img/eportfolio-home.webp" alt="E-Portfolio Startseite" loading="lazy">
-    </div>
-    <div class="shots two">
-      <img src="img/eportfolio-top10.webp" alt="E-Portfolio Top 10" loading="lazy">
-      <img src="img/eportfolio-projekte.webp" alt="E-Portfolio Projektübersicht" loading="lazy">
+    <div class="carousel" aria-label="Screenshots HSB E-Portfolio">
+      <div class="car-track">
+        <img src="img/eportfolio-home.webp" alt="E-Portfolio Startseite" loading="lazy">
+        <img src="img/eportfolio-top10.webp" alt="E-Portfolio Top 10" loading="lazy">
+        <img src="img/eportfolio-projekte.webp" alt="E-Portfolio Projektübersicht" loading="lazy">
+      </div>
     </div>
     <div class="plinks">
       <a href="https://github.com/OmarZiyada1/Hochschule-Bremen-EPortfolio">GitHub ↗</a>
@@ -152,10 +94,12 @@
   <article class="project">
     <div class="head"><h3>SyrLink</h3><span class="meta">Netzwerk-Plattform · 2026</span></div>
     <p class="desc">Berufliches Netzwerk für syrische Fachkräfte weltweit: Profile mit Lebenslauf, Feed, Projekte, Jobs und Organisationsseiten.</p>
-    <p class="my"><b>Mein Part:</b> Frontend-Entwicklung, Branding und mehrsprachige Inhalte (Arabisch, Deutsch, Englisch).</p>
-    <div class="shots two">
-      <img src="img/syrlink-home.webp" alt="SyrLink Feed" loading="lazy">
-      <img src="img/syrlink-profile.webp" alt="SyrLink Profil" loading="lazy">
+    <p class="my"><b>Mein Part:</b> Backend-Entwicklung, dazu einzelne Features im Frontend.</p>
+    <div class="carousel" aria-label="Screenshots SyrLink">
+      <div class="car-track">
+        <img src="img/syrlink-home.webp" alt="SyrLink Feed" loading="lazy">
+        <img src="img/syrlink-profile.webp" alt="SyrLink Profil" loading="lazy">
+      </div>
     </div>
     <div class="plinks">
       <a href="https://syrlink.app/">syrlink.app ↗</a>
@@ -201,13 +145,13 @@
       <img src="img/game.webp" alt="Omar Survival Game" loading="lazy">
       <h3>Omar Survival Game</h3>
       <p>2D-Arcade-Spiel mit Phaser: ausweichen, schießen, Tank auffüllen.</p>
-      <div class="plinks" style="margin-top:8px"><a href="https://github.com/OmarZiyada1/Survival_Game">GitHub ↗</a></div>
+      <div class="plinks"><a href="https://github.com/OmarZiyada1/Survival_Game">GitHub ↗</a></div>
     </div>
     <div class="item">
       <img src="img/parti.webp" alt="Parti Bremen" loading="lazy">
       <h3>Parti Bremen</h3>
       <p>Bürgerbeteiligungs-App, mit der Bremer Probleme melden, Fotos teilen und Projekte vorschlagen. Mein Part: Backend-API.</p>
-      <div class="plinks" style="margin-top:8px"><a href="https://github.com/MaximKirsch/PartiBremen-API">Backend-API ↗</a><a href="https://github.com/MohamadAlaskari/partiBremen-dashboard">Dashboard ↗</a></div>
+      <div class="plinks"><a href="https://github.com/MaximKirsch/PartiBremen-API">Backend-API ↗</a><a href="https://github.com/MohamadAlaskari/partiBremen-dashboard">Dashboard ↗</a></div>
     </div>
   </div>
 </section>
