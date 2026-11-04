@@ -23,6 +23,7 @@
       'ui.toLight': 'Helles Design aktivieren',
       'ui.dark': 'Dunkles Design',
       'ui.light': 'Helles Design',
+      'ui.top': 'Nach oben',
     },
 
     en: {
@@ -39,11 +40,7 @@
       'ui.toLight': 'Switch to light theme',
       'ui.dark': 'Dark theme',
       'ui.light': 'Light theme',
-
-      'nav.about': 'About',
-      'nav.projects': 'Projects',
-      'nav.design': 'Design',
-      'nav.contact': 'Contact',
+      'ui.top': 'Back to top',
 
       'hero.role': 'Backend Developer · Media Informatics (B.Sc.) · Bremen',
       'hero.intro': 'I build backend systems with Java and Spring Boot and design interfaces in Figma. I studied Media Informatics at Hochschule Bremen and gained hands-on experience as a backend developer at Webmen GmbH.',
@@ -123,11 +120,7 @@
       'ui.toLight': 'تفعيل الوضع الفاتح',
       'ui.dark': 'الوضع الداكن',
       'ui.light': 'الوضع الفاتح',
-
-      'nav.about': 'نبذة عني',
-      'nav.projects': 'المشاريع',
-      'nav.design': 'التصميم',
-      'nav.contact': 'تواصل',
+      'ui.top': 'العودة إلى الأعلى',
 
       'hero.role': 'مطوّر Backend · هندسة معلوماتية (<bdi>B.Sc.</bdi>) · بريمن',
       'hero.intro': 'أطوّر أنظمة Backend باستخدام Java وSpring Boot، وأصمّم الواجهات في Figma. درستُ الهندسة المعلوماتية في جامعة بريمن للعلوم التطبيقية، واكتسبت خبرة عملية في تطوير Backend لدى شركة Webmen GmbH.',

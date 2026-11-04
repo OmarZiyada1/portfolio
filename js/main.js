@@ -235,3 +235,17 @@
     startX = null;
   });
 })();
+
+// Pfeil nach oben: erscheint, sobald man etwa eine Bildschirmhöhe heruntergescrollt hat.
+(() => {
+  const btn = document.querySelector('.to-top');
+  if (!btn) return;
+  const toggle = () => btn.classList.toggle('show', window.scrollY > window.innerHeight * 0.8);
+  window.addEventListener('scroll', toggle, { passive: true });
+  window.addEventListener('resize', toggle);
+  toggle();
+  btn.addEventListener('click', () => {
+    const smooth = !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    window.scrollTo({ top: 0, behavior: smooth ? 'smooth' : 'auto' });
+  });
+})();

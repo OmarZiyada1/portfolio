@@ -20,11 +20,6 @@ nav{position:sticky;top:0;background:var(--bg);border-bottom:1px solid var(--lin
 nav .wrap{display:flex;justify-content:space-between;align-items:center;height:56px}
 nav b{font-weight:600;white-space:nowrap}
 nav .links{display:flex;align-items:center;flex-shrink:0}
-nav .links a{text-decoration:none;color:var(--muted);margin-inline-start:22px;font-size:14px;white-space:nowrap}
-nav .links a:hover{color:var(--fg)}
-/* Wenn nicht alle Links passen (js/nav.js): nur Sprache und Hell/Dunkel */
-nav.compact .links a{display:none}
-nav.compact .lang-btn svg{display:block}
 
 /* Theme-Knopf */
 .theme-toggle{display:flex;align-items:center;justify-content:center;width:34px;height:34px;margin-inline-start:18px;padding:0;border:1px solid var(--line);border-radius:50%;background:transparent;color:var(--fg);cursor:pointer;transition:border-color .15s}
@@ -146,6 +141,13 @@ h2{font-size:13px;text-transform:uppercase;letter-spacing:.12em;color:var(--mute
 footer{border-top:1px solid var(--line);padding:40px 0 56px;font-size:14px;color:var(--muted)}
 footer a{color:var(--fg)}
 
+/* Pfeil nach oben */
+.to-top{position:fixed;bottom:24px;inset-inline-end:24px;z-index:15;display:flex;align-items:center;justify-content:center;width:48px;height:48px;padding:0;border:0;border-radius:50%;background:var(--fg);color:var(--bg);cursor:pointer;box-shadow:0 6px 20px rgba(0,0,0,.2);opacity:0;visibility:hidden;transform:translateY(12px);transition:opacity .25s,transform .25s,visibility .25s}
+.to-top.show{opacity:1;visibility:visible;transform:none}
+.to-top.show:hover{transform:translateY(-3px)}
+.to-top:focus-visible{outline:2px solid var(--fg);outline-offset:3px}
+.to-top svg{width:20px;height:20px}
+
 /* Klickbare Bilder */
 .zoomable{cursor:zoom-in;transition:opacity .15s}
 .zoomable:hover{opacity:.88}
@@ -188,7 +190,7 @@ html.lb-open{overflow:hidden}
   .theme-toggle{margin-inline-start:12px;width:32px;height:32px}
   .lang{margin-inline-start:12px}
   .lang-btn{height:32px;padding:0 9px}
-  .lang-btn svg{display:none}
+  .to-top{bottom:16px;inset-inline-end:16px;width:44px;height:44px}
   .lb-figure{max-width:100vw;padding:0 8px}
   .lb-prev,.lb-next{top:auto;bottom:20px;transform:none}
   .lb-img{max-height:calc(100dvh - 170px)}
