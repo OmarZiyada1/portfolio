@@ -42,14 +42,14 @@
       'ui.light': 'Light theme',
       'ui.top': 'Back to top',
 
-      'hero.role': 'Backend Developer · Media Informatics (B.Sc.) · Bremen',
-      'hero.intro': 'I build backend systems with Java and Spring Boot and design interfaces in Figma. I studied Media Informatics at Hochschule Bremen and gained hands-on experience as a backend developer at Webmen GmbH.',
+      'hero.role': 'Backend Developer · Media Computer Science (B.Sc.) · Bremen',
+      'hero.intro': 'I build backend systems with Java and Spring Boot and design interfaces in Figma. I studied Media Computer Science at Hochschule Bremen and gained hands-on experience as a backend developer at Webmen GmbH.',
       'hero.mail': 'Email me',
       'hero.alt': 'Portrait of Omar Ziyada',
 
       'cv.title': 'Career at a glance',
       'cv.job': 'Backend Development (Internship)',
-      'cv.bsc': 'B.Sc. Media Informatics',
+      'cv.bsc': 'B.Sc. Media Computer Science',
       'cv.bsc.place': 'Hochschule Bremen – City University of Applied Sciences',
       'cv.bsc.note': 'Semester abroad at GJU Amman · Erasmus+ BIP Groningen',
       'cv.mta': 'Mathematical-Technical Assistant (Business Informatics)',
