@@ -45,6 +45,8 @@
       'hero.role': 'Backend Developer · Media Computer Science (B.Sc.) · Bremen',
       'hero.intro': 'I build backend systems with Java and Spring Boot and design interfaces in Figma. I studied Media Computer Science at Hochschule Bremen and gained hands-on experience as a backend developer at Webmen GmbH.',
       'hero.mail': 'Email me',
+      'hero.cv': 'CV (PDF)',
+      'hero.cv.file': 'cv/Omar_Ziyada_CV_English.pdf',
       'hero.alt': 'Portrait of Omar Ziyada',
 
       'cv.title': 'Career at a glance',
@@ -125,6 +127,8 @@
       'hero.role': 'مطوّر Backend · هندسة معلوماتية (<bdi>B.Sc.</bdi>) · بريمن',
       'hero.intro': 'أطوّر أنظمة Backend باستخدام Java وSpring Boot، وأصمّم الواجهات في Figma. درستُ الهندسة المعلوماتية في جامعة بريمن للعلوم التطبيقية، واكتسبت خبرة عملية في تطوير Backend لدى شركة Webmen GmbH.',
       'hero.mail': 'راسلني',
+      'hero.cv': 'السيرة الذاتية (PDF)',
+      'hero.cv.file': 'cv/Omar_Ziyada_CV_Arabic.pdf',
       'hero.alt': 'صورة شخصية: Omar Ziyada',
 
       'cv.title': 'المسيرة باختصار',
@@ -144,10 +148,10 @@
       'skills.design': 'التصميم والوسائط',
       'skills.erp': 'أنظمة ERP',
       'tag.rest': 'REST APIs',
-      'tag.testing': 'اختبار البرمجيات',
-      'tag.ai': 'التطوير بمساعدة الذكاء الاصطناعي',
-      'tag.video': 'مونتاج الفيديو',
-      'tag.comarch': 'Comarch (أساسيات)',
+      'tag.testing': 'Software Testing',
+      'tag.ai': 'AI-assisted Development',
+      'tag.video': 'Video Editing',
+      'tag.comarch': 'Comarch (Basics)',
 
       'projects.title': 'المشاريع',
       'p1.meta': 'أطروحة البكالوريوس · مشروع جماعي · 2026',
