@@ -99,6 +99,8 @@
       'd1.desc': 'Screens and design system of the E-Portfolio platform.',
       'd2.label': 'App concept',
       'd2.desc': 'Shared-flat app that prevents arguments: cleaning rota, shared shopping and anonymous feedback.',
+      'd3.label': 'UX/UI concept · Erasmus+ BIP, Groningen',
+      'd3.desc': 'Platform for large companies: managers find the right people for their projects, employees find projects that fit their skills and plan their growth with career roadmaps.',
 
       'more.title': 'More work',
       'game.desc': '2D arcade game built with Phaser: dodge, shoot, refuel.',
@@ -181,6 +183,8 @@
       'd1.desc': 'شاشات منصة E-Portfolio ونظام تصميمها.',
       'd2.label': 'فكرة تطبيق',
       'd2.desc': 'تطبيق للسكن المشترك يقي من الخلافات: جدول للتنظيف، ومشتريات مشتركة، وملاحظات مجهولة الهوية.',
+      'd3.label': 'تصميم UX/UI · برنامج Erasmus+ BIP، خرونينغن',
+      'd3.desc': 'منصة للشركات الكبيرة: يجد فيها المديرون الأشخاص المناسبين لمشاريعهم، ويجد الموظفون مشاريع تناسب مهاراتهم، مع خطط واضحة للتطور المهني.',
 
       'more.title': 'أعمال أخرى',
       'game.desc': 'لعبة Arcade ثنائية الأبعاد مبنية بإطار Phaser: تفادَ العقبات، وأطلق النار، واملأ الخزان.',
